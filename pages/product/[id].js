@@ -17,7 +17,8 @@ export default function ProductPage() {
         View Supplier Info
       </a>
       <br />
-      <a href="/checkout" className="mt-4 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+      import Link from 'next/link';
+      <Link href="/checkout/">Order Now</Link> className="mt-4 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
         Order Now
       </a>
     </div>
