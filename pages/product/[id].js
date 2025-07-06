@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { productsData } from '../../data/products';
+import Link from 'next/link'; // ✅ Move import to top
 
 export default function ProductPage() {
   const { query } = useRouter();
@@ -17,10 +18,12 @@ export default function ProductPage() {
         View Supplier Info
       </a>
       <br />
-      import Link from 'next/link';
-      <Link href="/checkout/">Order Now</Link> className="mt-4 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
-        Order Now
-      </a>
+      {/* ✅ Fixed Link structure */}
+      <Link href="/checkout/">
+        <a className="mt-4 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+          Order Now
+        </a>
+      </Link>
     </div>
   );
 }
